@@ -6,6 +6,7 @@ const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
+    const [isInitializing, setIsInitializing] = useState(true);
     const [balance, setBalance] = useState(0);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -15,33 +16,40 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         const token = localStorage.getItem('token');
         const role = localStorage.getItem('role');
-        const balance = parseInt(localStorage.getItem('balance')) || 0;
 
         if (token && role) {
             setUser({ role });
-            setBalance(balance);
+            setBalance(parseInt(localStorage.getItem('balance')) || 0);
         }
+        setIsInitializing(false);
     }, []);
+
+    if (isInitializing){
+        return <div>加载中...</div>;
+    }
 
     const login = async (credentials) => {
         setLoading(true);
         setError(null);
         try {
             const { token, role, balance } = await apiLogin(credentials);
+            console.log('API返回的role:', role); // 调试日志
 
             localStorage.setItem('token', token);
             localStorage.setItem('role', role);
             localStorage.setItem('balance', balance);
 
+            console.log('localStorage中的role:', localStorage.getItem('role')); // 调试日志
+
             setUser({ role });
             setBalance(balance);
-            setTimeout(() => {
-                navigate(role === 'admin' ? '/admin' : '/');
-            }, 0);
 
             // 根据角色重定向
             console.log('登录角色:', role);
-            navigate(role === 'admin' ? '/admin' : '/');
+            setTimeout(() => {
+                console.log('当前user状态:', { role }); // 调试
+                navigate(role === 'admin' ? '/admin' : '/');
+            }, 500);
         } catch (err) {
             setError(err.message || '登录失败');
             throw err;

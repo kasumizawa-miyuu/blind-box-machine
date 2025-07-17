@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './BoxForm.css';
+import api from '../services/api'
 
-export default function BoxForm({ onSubmit }) {
-    const [box, setBox] = useState({
+export default function BoxForm({ onSubmit, initialBox }) {
+    const [box, setBox] = useState( initialBox || {
         name: '',
         description: '',
         price: 0,
@@ -13,10 +14,57 @@ export default function BoxForm({ onSubmit }) {
             probability: 0.5,
             wearLevels: [
                 { level: '崭新出厂', price: 0 },
-                { level: '略有磨损', price: 0 }
+                { level: '略有磨损', price: 0 },
+                { level: '久经沙场', price: 0 },
+                { level: '破损不堪', price: 0 },
+                { level: '战痕累累', price: 0 }
             ]
         }]
     });
+    const [uploading, setUploading] = useState(false);
+
+    const handleImageUpload = async (e, type, itemIndex = null) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        if (type === 'box') {
+            setBox({ ...box, image: file });
+        } else {
+            const newItems = [...box.items];
+            newItems[itemIndex].image = file;
+            setBox({ ...box, items: newItems });
+        }
+
+        setUploading(true);
+        try {
+            const formData = new FormData();
+            formData.append('image', file);
+            const response = await api.post('/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+
+            if (type === 'box') {
+                setBox({ ...box, image: response.url });
+            } else {
+                const newItems = [...box.items];
+                newItems[itemIndex].image = response.url;
+                setBox({ ...box, items: newItems });
+            }
+        } catch (error) {
+            console.error('图片上传失败:', error);
+            if (type === 'box') {
+                setBox({ ...box, image: '' });
+            } else {
+                const newItems = [...box.items];
+                newItems[itemIndex].image = '';
+                setBox({ ...box, items: newItems });
+            }
+        } finally {
+            setUploading(false);
+        }
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -49,7 +97,10 @@ export default function BoxForm({ onSubmit }) {
                     probability: 0.5,
                     wearLevels: [
                         { level: '崭新出厂', price: 0 },
-                        { level: '略有磨损', price: 0 }
+                        { level: '略有磨损', price: 0 },
+                        { level: '久经沙场', price: 0 },
+                        { level: '破损不堪', price: 0 },
+                        { level: '战痕累累', price: 0 }
                     ]
                 }
             ]
@@ -122,11 +173,31 @@ export default function BoxForm({ onSubmit }) {
             <div className="form-group">
                 <label>图片URL</label>
                 <input
-                    type="url"
-                    name="image"
-                    value={box.image}
-                    onChange={handleChange}
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => handleImageUpload(e, 'box')}
+                    disabled={uploading}
                 />
+            </div>
+
+            <div className="form-group">
+                <label>盲盒图片</label>
+                <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => handleImageUpload(e, 'box')}
+                    disabled={uploading}
+                />
+                {uploading && <p>上传中...</p>}
+                {box.image && (
+                    <div className="image-preview">
+                        {typeof box.image === 'object' ? (
+                            <img src={URL.createObjectURL(box.image)} alt="预览" />
+                        ) : (
+                            <img src={box.image} alt="盲盒图片" />
+                        )}
+                    </div>
+                )}
             </div>
 
             <h4>包含物品</h4>
@@ -159,11 +230,27 @@ export default function BoxForm({ onSubmit }) {
                     <div className="form-group">
                         <label>物品图片URL</label>
                         <input
-                            type="url"
-                            name="image"
-                            value={item.image}
-                            onChange={(e) => handleItemChange(itemIndex, e)}
+                            type="file"
+                            accept="image/*"
+                            onChange={(e) => handleImageUpload(e, 'box')}
+                            disabled={uploading}
                         />
+                    </div>
+
+                    <div className="form-group">
+                        <label>物品图片</label>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onChange={(e) => handleImageUpload(e, 'item', itemIndex)}
+                            disabled={uploading}
+                        />
+                        {uploading && <p>上传中...</p>}
+                        {item.image && (
+                            <div className="image-preview">
+                                <img src={item.image} alt="物品预览" />
+                            </div>
+                        )}
                     </div>
 
                     <div className="form-group">

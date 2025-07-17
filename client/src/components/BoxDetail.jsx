@@ -4,7 +4,7 @@ import { fetchBoxDetail, purchaseBox } from '../services/boxService';
 import { useAuth } from '../stores/auth.jsx';
 import './BoxDetail.css';
 
-export default function BoxDetail() {
+export default function BoxDetail({ boxId, box: propBox, adminView}) {
     const { id } = useParams();
     const navigate = useNavigate();
     const { user, balance, updateBalance } = useAuth();
@@ -13,21 +13,27 @@ export default function BoxDetail() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const loadBoxDetail = async () => {
-            setLoading(true);
-            try {
-                const data = await fetchBoxDetail(id);
-                setBox(data);
-            } catch (error) {
-                setError('获取盲盒详情失败');
-                console.error('Failed to fetch box detail:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        loadBoxDetail();
-    }, [id]);
+        if (propBox) {
+            // 如果通过props传递了box数据，直接使用
+            setBox(propBox);
+            setLoading(false);
+        } else if (boxId) {
+            // 否则从API获取
+            const loadBoxDetail = async () => {
+                setLoading(true);
+                try {
+                    const data = await fetchBoxDetail(boxId);
+                    setBox(data);
+                } catch (error) {
+                    setError('获取盲盒详情失败');
+                    console.error('Failed to fetch box detail:', error);
+                } finally {
+                    setLoading(false);
+                }
+            };
+            loadBoxDetail();
+        }
+    }, [boxId, propBox]);
 
     const handlePurchase = async () => {
         if (!user) {
@@ -80,7 +86,7 @@ export default function BoxDetail() {
             </div>
 
             <div className="possible-items">
-                <h2>可能包含的物品</h2>
+                <h2>包含的物品</h2>
                 <div className="items-grid">
                     {box.items.map((item) => (
                         <div key={item.name} className="item-card">

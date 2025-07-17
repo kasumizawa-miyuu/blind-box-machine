@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
 export default function App() {
+    console.log("App组件渲染");
     return (
         <Router>
             <AuthProvider>
@@ -19,9 +20,12 @@ export default function App() {
                     <Route
                         path="/admin"
                         element={
-                            <ProtectedRoute role="admin">
-                                <AdminPage />
-                            </ProtectedRoute>
+                            <div>
+                                {console.log("正在渲染/admin路由")} {/* 检查是否执行 */}
+                                <ProtectedRoute role="admin">
+                                    <AdminPage />
+                                </ProtectedRoute>
+                            </div>
                         }
                     />
                     <Route
