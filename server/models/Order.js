@@ -6,12 +6,12 @@ const orderSchema = new mongoose.Schema({
     item: {
         name: { type: String, required: true },
         image: { type: String },
-        wearLevel: { type: String, required: true },
-        sellPrice: { type: Number, required: true }
+        wearLevel: { type: String },
+        sellPrice: { type: Number }
     },
-    type: { type: String, enum: ['purchase', 'sell'], required: true },
+    type: { type: String, enum: ['purchase', 'open_box', 'sell_item'], required: true },
     amount: { type: Number, required: true },
     createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Order', orderSchema);
+module.exports = mongoose.model('Order', orderSchema, 'orders');

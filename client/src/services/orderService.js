@@ -1,22 +1,25 @@
 import api from './api';
 
-/**
- * 获取用户订单列表
- * @param {Object} [params] - 查询参数
- * @param {number} [params.page=1] - 页码
- * @param {number} [params.limit=10] - 每页数量
- * @param {string} [params.type] - 订单类型(purchase/sell)
- * @returns {Promise<Array>} 订单数组
- */
 export const getUserOrders = async (params = {}) => {
-    const response = await api.get('/orders', {
-        params: {
-            page: 1,
-            limit: 10,
-            ...params
-        }
-    });
-    return response;
+    try {
+        const response = await api.get('/orders/user', {
+            params: {
+                page: 1,
+                limit: 10,
+                ...params
+            }
+        });
+
+        console.log('订单完整API响应:', response);
+
+        // 根据实际响应结构调整数据提取方式
+        return Array.isArray(response) ? response :
+            Array.isArray(response?.data) ? response.data :
+                Array.isArray(response?.data?.data) ? response.data.data : [];
+    } catch (error) {
+        console.error('获取订单失败:', error);
+        throw error;
+    }
 };
 
 /**

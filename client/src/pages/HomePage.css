@@ -29,6 +29,36 @@
     color: #42b983;
 }
 
+.user-info .username {
+    color: #333;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.balance {
+    font-weight: 600;
+    color: #42b983;
+}
+
+.user-links {
+    display: flex;
+    gap: 10px;
+}
+
+.user-links a {
+    color: #42b983;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0;
+    background: none;
+}
+
+.user-links a:hover {
+    text-decoration: underline;
+    background: transparent;
+    color: #3aa876;
+}
+
 .user-info button,
 .user-info a {
     padding: 8px 16px;
@@ -44,4 +74,33 @@
 .user-info button:hover,
 .user-info a:hover {
     background: #3aa876;
+}
+
+.nav-btn {
+    color: #42b983;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: 1px solid #42b983;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #f0f9f5;
+    text-decoration: none;
+}
+
+.logout-btn {
+    padding: 5px 10px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #d32f2f;
 }

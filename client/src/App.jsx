@@ -5,6 +5,8 @@ import LoginPage from './pages/LoginPage';
 import BoxDetailPage from './pages/BoxDetailPage';
 import AdminPage from './pages/AdminPage';
 import OrdersPage from './pages/OrdersPage';
+import StoragePage from "./pages/StoragePage";
+import PublicItemsPage from "./pages/PublicItemsPage";
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
@@ -28,6 +30,15 @@ export default function App() {
                             </div>
                         }
                     />
+                    <Route
+                        path="/storage"
+                        element={
+                            <ProtectedRoute role="user">
+                                <StoragePage />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route path="/public-items" element={<PublicItemsPage />} />
                     <Route
                         path="/orders"
                         element={

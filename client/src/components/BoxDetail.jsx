@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchBoxDetail, purchaseBox } from '../services/boxService';
 import { useAuth } from '../stores/auth.jsx';
+import { Link } from 'react-router-dom';
 import './BoxDetail.css';
 
 export default function BoxDetail({ boxId, box: propBox, adminView}) {
@@ -40,11 +41,16 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
             navigate('/login');
             return;
         }
+        console.log('开始购买流程');
+        setLoading(true);
+        setError(null);
 
         try {
             setLoading(true);
+            console.log('正在发送购买请求...');
             const result = await purchaseBox(box._id);
-            alert(`恭喜你抽到了: ${result.item.name} (${result.item.wearLevel})`);
+            console.log('收到响应:', result);
+            alert('购买成功，盲盒已添加到仓库');
             updateBalance(result.balance);
         } catch (error) {
             setError(error.message || '购买失败');
@@ -61,27 +67,33 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
     return (
         <div className="box-detail">
             <div className="box-header">
-                <img src={box.image || '/placeholder-box.png'} alt={box.name} />
-                <div className="box-info">
-                    <h1>{box.name}</h1>
-                    <p className="description">{box.description}</p>
-                    <p className="price">价格: ¥{box.price}</p>
+                <div className="box-nav">
+                    <Link to="/" className="back-home-btn">← 返回首页</Link>
+                    <Link to="/storage" className="back-storage-btn">我的仓库</Link>
+                </div>
+                <div className="box-content">
+                    <img src={box.image || '/placeholder-box.png'} alt={box.name} />
+                    <div className="box-info">
+                        <h1>{box.name}</h1>
+                        <p className="description">{box.description}</p>
+                        <p className="price">价格: ¥{box.price}</p>
 
-                    {user?.role === 'user' && (
-                        <div className="actions">
-                            <button
-                                onClick={handlePurchase}
-                                disabled={balance < box.price || loading}
-                            >
-                                购买盲盒 (¥{box.price})
-                            </button>
-                            {balance < box.price && (
-                                <p className="error">
-                                    余额不足，当前余额: ¥{balance}
-                                </p>
-                            )}
-                        </div>
-                    )}
+                        {user?.role === 'user' && (
+                            <div className="actions">
+                                <button
+                                    onClick={handlePurchase}
+                                    disabled={balance < box.price || loading}
+                                >
+                                    购买盲盒 (¥{box.price})
+                                </button>
+                                {balance < box.price && (
+                                    <p className="error">
+                                        余额不足，当前余额: ¥{balance}
+                                    </p>
+                                )}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import './BoxForm.css';
 import api from '../services/api'
 
@@ -22,6 +22,22 @@ export default function BoxForm({ onSubmit, initialBox }) {
         }]
     });
     const [uploading, setUploading] = useState(false);
+    const [probabilityError, setProbabilityError] = useState('');
+
+    // 计算概率总和
+    useEffect(() => {
+        const totalProbability = box.items.reduce(
+            (sum, item) => sum + item.probability,
+            0
+        );
+
+        // 允许0.99到1.01之间的微小误差，避免浮点数精度问题
+        if (Math.abs(totalProbability - 1) > 0.01) {
+            setProbabilityError(`概率总和必须为1 (当前: ${totalProbability.toFixed(2)})`);
+        } else {
+            setProbabilityError('');
+        }
+    }, [box.items]);
 
     const handleImageUpload = async (e, type, itemIndex = null) => {
         const file = e.target.files[0];
@@ -130,6 +146,17 @@ export default function BoxForm({ onSubmit, initialBox }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const totalProbability = box.items.reduce(
+            (sum, item) => sum + item.probability,
+            0
+        );
+
+        if (Math.abs(totalProbability - 1) > 0.01) {
+            alert(`无法提交: 所有物品的概率总和必须为1 (当前: ${totalProbability.toFixed(2)})`);
+            return;
+        }
+
         onSubmit(box);
     };
 
@@ -171,16 +198,6 @@ export default function BoxForm({ onSubmit, initialBox }) {
             </div>
 
             <div className="form-group">
-                <label>图片URL</label>
-                <input
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) => handleImageUpload(e, 'box')}
-                    disabled={uploading}
-                />
-            </div>
-
-            <div className="form-group">
                 <label>盲盒图片</label>
                 <input
                     type="file"
@@ -192,7 +209,7 @@ export default function BoxForm({ onSubmit, initialBox }) {
                 {box.image && (
                     <div className="image-preview">
                         {typeof box.image === 'object' ? (
-                            <img src={URL.createObjectURL(box.image)} alt="预览" />
+                            <img src={box.image} alt="预览" />
                         ) : (
                             <img src={box.image} alt="盲盒图片" />
                         )}
@@ -200,7 +217,9 @@ export default function BoxForm({ onSubmit, initialBox }) {
                 )}
             </div>
 
-            <h4>包含物品</h4>
+            <h4>包含物品 {probabilityError && (
+                <span className="error-text">{probabilityError}</span>
+            )}</h4>
             {box.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="item-section">
                     <div className="item-header">
@@ -228,16 +247,6 @@ export default function BoxForm({ onSubmit, initialBox }) {
                     </div>
 
                     <div className="form-group">
-                        <label>物品图片URL</label>
-                        <input
-                            type="file"
-                            accept="image/*"
-                            onChange={(e) => handleImageUpload(e, 'box')}
-                            disabled={uploading}
-                        />
-                    </div>
-
-                    <div className="form-group">
                         <label>物品图片</label>
                         <input
                             type="file"
@@ -259,7 +268,14 @@ export default function BoxForm({ onSubmit, initialBox }) {
                             type="number"
                             name="probability"
                             value={item.probability}
-                            onChange={(e) => handleItemChange(itemIndex, e)}
+                            onChange={(e) => {
+                                handleItemChange(itemIndex, e);
+                                // 实时验证
+                                const value = parseFloat(e.target.value);
+                                if (value < 0 || value > 1) {
+                                    setProbabilityError('概率必须在0到1之间');
+                                }
+                            }}
                             min="0"
                             max="1"
                             step="0.01"

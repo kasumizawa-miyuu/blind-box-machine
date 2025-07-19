@@ -33,7 +33,7 @@ export function AuthProvider({ children }) {
         setError(null);
         try {
             const { token, role, balance } = await apiLogin(credentials);
-            console.log('API返回的role:', role); // 调试日志
+            console.log('API返回的role:', role);
 
             localStorage.setItem('token', token);
             localStorage.setItem('role', role);

@@ -1,12 +1,14 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const routes = require('./routes');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const multer = require('multer');
 const authRoutes = require('./routes/auth');
 const boxRoutes = require('./routes/boxes');
 const orderRoutes = require('./routes/order');
+const storageRoute = require('./routes/storage');
 
 dotenv.config();
 
@@ -40,16 +42,22 @@ const upload = multer({
 
 // 数据库连接
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/blindbox');
+mongoose.connection.on('connected', () => {
+    console.log('当前数据库:', mongoose.connection.db.databaseName); // 打印实际连接的数据库
+});
 
 // 中间件
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
 
 // API路由
+app.use('/', routes);
 app.use('/api/auth', authRoutes);
 app.use('/api/boxes', boxRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/storage', storageRoute)
 
 // 添加图片上传路由
 app.post('/api/upload', upload.single('image'), (req, res) => {

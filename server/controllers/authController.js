@@ -29,6 +29,8 @@ exports.login = async (req, res) => {
         const { username, password } = req.body;
         const user = await User.findOne({ username });
 
+        console.log('Found user:', user);
+
         if (!user || !(await user.comparePassword(password))) {
             return res.status(401).json({ error: 'Invalid credentials' });
         }
@@ -38,6 +40,12 @@ exports.login = async (req, res) => {
             process.env.JWT_SECRET,
             { expiresIn: '1d' }
         );
+
+        console.log('Login response:', { // 添加调试日志
+            token,
+            role: user.role,
+            balance: user.balance
+        });
 
         res.json({
             token,
