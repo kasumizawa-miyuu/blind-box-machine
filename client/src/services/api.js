@@ -18,7 +18,12 @@ api.interceptors.request.use((config) => {
 
 // 响应拦截器 - 处理错误
 api.interceptors.response.use((response) => {
-    return response.data;
+    return {
+        status: response.data?.status || 'success',
+        data: response.data?.data || response.data,
+        message: response.data?.message,
+        ...response.data
+    };
 }, (error) => {
     if (error.response?.status === 401) {
         // 认证失败，跳转到登录页

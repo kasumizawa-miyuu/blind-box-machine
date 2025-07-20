@@ -15,9 +15,23 @@ export const getUserStorage = async () => {
     }
 };
 
-export const openBox = async (boxId) => {
-    const response = await api.post(`/storage/${boxId}/open`);
-    return response;
+export const openBox = async (data) => {
+    try {
+        console.log('发送开盒请求，数据:', data);
+        const response = await api.post('/storage/open', data);
+
+        // 验证响应结构
+        if (response.status !== 'success') {
+            throw new Error(response.message || '开盒操作失败');
+        }
+
+        console.log('开盒成功响应:', response);
+        return response.data;
+
+    } catch (error) {
+        console.error('开盒请求失败:', error);
+        throw new Error(error.response?.data?.message || error.message || '开盒失败');
+    }
 };
 
 export const sellItem = async (itemId) => {

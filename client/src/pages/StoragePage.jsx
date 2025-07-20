@@ -33,15 +33,19 @@ export default function StoragePage() {
     }, [user, balance]);
 
     const handleOpenBox = async (storageId) => {
+        console.log('[DEBUG] 开盒前验证 - 目标物品:', storage.find(item => item._id === storageId));
         try {
             setLoading(true);
-            const { data } = await openBox({ storageId });
-            alert(`你获得了: ${data.item.name} (${data.item.wearLevel})`);
-            updateBalance(data.balance);
-            setStorage(prev => prev.filter(item => item._id !== storageId));
+            const result = await openBox({ storageId });
+            console.log('开盒成功:', result);
+            if (result) {
+                alert(`成功获得: ${result.item.name} (${result.item.wearLevel})`);
+                updateBalance(result.balance);
+                setStorage(prev => prev.filter(item => item._id !== storageId));
+            }
         } catch (error) {
             console.error('Failed to open box:', error);
-            alert('开盒失败: ' + error.message);
+            alert(`操作失败: ${error.message || '请刷新页面重试'}`);
         } finally {
             setLoading(false);
         }

@@ -2,15 +2,32 @@ const mongoose = require('mongoose');
 const Order = require('../models/Order');
 const Storage = require('../models/Storage');
 const Box = require('../models/Box');
+const User = require('../models/User');
 
 // 开启盲盒
 exports.openBox = async (req, res) => {
     const session = await mongoose.startSession();
     session.startTransaction();
 
+    console.log('[DEBUG] 开盒请求参数:', {
+        storageId: req.body.storageId,
+        userId: req.user.userId,
+        timestamp: new Date()
+    });
     try {
         const { storageId } = req.body;
         const userId = req.user.userId;
+
+        // 获取当前用户信息
+        const user = await User.findById(userId).session(session);
+        if (!user) {
+            await session.abortTransaction();
+            await session.endSession();
+            return res.status(404).json({
+                status: 'error',
+                message: '用户不存在'
+            });
+        }
 
         // 验证未开启的盲盒是否存在
         const unopenedBox = await Storage.findOne({
@@ -19,9 +36,19 @@ exports.openBox = async (req, res) => {
             type: 'unopened_box'
         }).session(session);
 
+        console.log('[DEBUG] 数据库查询结果:', {
+            found: !!unopenedBox,
+            actualUserId: unopenedBox?.user?.toString(),
+            actualType: unopenedBox?.type
+        });
+
         if (!unopenedBox) {
             await session.abortTransaction();
-            return res.status(404).json({ error: '未找到可开启的盲盒' });
+            return res.status(404).json({
+                status: 'error',
+                message: '未找到可开启的盲盒',
+                code: 'BOX_NOT_FOUND'
+            });
         }
 
         // 获取盲盒数据
@@ -88,26 +115,33 @@ exports.openBox = async (req, res) => {
         ]);
 
         await session.commitTransaction();
+        await session.endSession();
 
         res.json({
-            success: true,
-            item: {
-                name: selectedItem.name,
-                image: selectedItem.image,
-                wearLevel: wearLevel.level,
-                sellPrice: wearLevel.price
-            },
-            storageId: newStorageItem._id
+            status: 'success',
+            data: {
+                item: {
+                    name: selectedItem.name,
+                    image: selectedItem.image,
+                    wearLevel: wearLevel.level,
+                    sellPrice: wearLevel.price
+                },
+                balance: user.balance,
+                storageId: newStorageItem._id
+            }
         });
     } catch (error) {
-        await session.abortTransaction();
+        if (session.inTransaction()){
+            await session.abortTransaction();
+        }
         console.error('开盒失败:', error);
+
+        await session.endSession();
         res.status(500).json({
-            error: '开盒失败',
+            status: 'error',
+            message: '开盒操作失败',
             details: process.env.NODE_ENV === 'development' ? error.message : undefined
         });
-    } finally {
-        session.endSession();
     }
 };
 
@@ -129,7 +163,11 @@ exports.sellItem = async (req, res) => {
 
         if (!item) {
             await session.abortTransaction();
-            return res.status(404).json({ error: '未找到可卖出的物品' });
+            return res.status(404).json({
+                status: 'error',
+                message: '未找到可卖出的物品',
+                code: 'ITEM_NOT_FOUND'
+            });
         }
 
         // 创建卖出订单记录
@@ -161,15 +199,18 @@ exports.sellItem = async (req, res) => {
         await session.commitTransaction();
 
         res.json({
-            success: true,
-            balance: user.balance,
-            amount: item.itemData.sellPrice
+            status: 'success',
+            data: {
+                balance: user.balance,
+                amount: item.itemData.sellPrice
+            }
         });
     } catch (error) {
         await session.abortTransaction();
         console.error('卖出失败:', error);
         res.status(500).json({
-            error: '卖出失败',
+            status: 'error',
+            message: '卖出操作失败',
             details: process.env.NODE_ENV === 'development' ? error.message : undefined
         });
     } finally {
@@ -192,6 +233,41 @@ exports.getUserStorage = async (req, res) => {
         res.status(500).json({
             status: 'error',
             error: '获取仓库物品失败'
+        });
+    }
+};
+
+// 切换物品可见性
+exports.toggleItemVisibility = async (req, res) => {
+    try {
+        const { itemId } = req.params;
+        const userId = req.user.userId;
+
+        const item = await Storage.findOneAndUpdate(
+            { _id: itemId, user: userId },
+            [{ $set: { isPublic: { $not: "$isPublic" } } }],
+            { new: true }
+        );
+
+        if (!item) {
+            return res.status(404).json({
+                status: 'error',
+                message: '未找到物品',
+            });
+        }
+
+        res.json({
+            status: 'success',
+            data: {
+                storage: await Storage.find({ user: userId }).sort({ createdAt: -1 })
+            }
+        });
+
+    } catch (error) {
+        console.error('切换可见性失败:', error);
+        res.status(500).json({
+            status: 'error',
+            message: '切换可见性失败',
         });
     }
 };
