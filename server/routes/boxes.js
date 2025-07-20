@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const controller = require('../controllers/boxController');
 const Box = require('../models/Box');
+const validate = require('../middlewares/validate');
 const authMiddleware = require('../middlewares/auth');
+const Joi = require('joi');
 
 // 获取所有盲盒
 router.get('/', async (req, res) => {
@@ -63,5 +66,16 @@ router.delete('/:id', authMiddleware('admin'), async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+// 购买盲盒
+router.post('/purchase',
+    authMiddleware('user'),
+    validate({
+        body: Joi.object({
+            boxId: Joi.string().required()
+        })
+    }),
+    controller.purchaseBox
+);
 
 module.exports = router;

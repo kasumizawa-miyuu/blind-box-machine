@@ -67,10 +67,12 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
     return (
         <div className="box-detail">
             <div className="box-header">
-                <div className="box-nav">
+                {user?.role === 'user' && (
+                    <div className="box-nav">
                     <Link to="/" className="back-home-btn">← 返回首页</Link>
                     <Link to="/storage" className="back-storage-btn">我的仓库</Link>
-                </div>
+                    </div>
+                )}
                 <div className="box-content">
                     <img src={box.image || '/placeholder-box.png'} alt={box.name} />
                     <div className="box-info">
