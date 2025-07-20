@@ -28,7 +28,7 @@ export const purchaseBox = async (boxId) => {
     console.log('准备购买盲盒:', boxId);
 
     try {
-        const response = await api.post('/orders/purchase', { boxId });
+        const response = await api.post('/boxes/purchase', { boxId });
         const responseData = response.data?.data || response.data;
         if (!responseData) {
             throw new Error('服务器返回空响应');

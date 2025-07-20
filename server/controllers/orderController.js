@@ -7,7 +7,6 @@ exports.getUserOrders = async (req, res) => {
             .sort({ createdAt: -1 })
             .populate('box', 'name image');
 
-        console.log('查询到的订单:', orders);
         res.json({
             status: 'success',
             data: orders
