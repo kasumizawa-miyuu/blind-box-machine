@@ -278,7 +278,7 @@ export default function BoxForm({ onSubmit, initialBox }) {
                             }}
                             min="0"
                             max="1"
-                            step="0.01"
+                            step="0.0000001"
                             required
                         />
                     </div>

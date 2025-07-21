@@ -61,12 +61,13 @@ export default function OrdersPage() {
                                 <h3>{order.item?.name || '位置物品'}</h3>
                                 {order.item?.wearLevel && <p>磨损度: {order.item.wearLevel}</p>}
                                 {order.box && <p>盲盒: {order.box.name}</p>}
-                                <p className="order-amount">
-                                    {order.type === 'purchase' && '购买'}
-                                    {order.type === 'open_box' && '开盒获得'}
-                                    {order.type === 'sell_item' && '卖出'}
-                                    : ¥{Math.abs(order.amount)}
-                                </p>
+                                {order.type !== 'open_box' && (
+                                    <p className="order-amount">
+                                        {order.type === 'purchase' && '购买'}
+                                        {order.type === 'sell_item' && '卖出'}
+                                        : ¥{Math.abs(order.amount)}
+                                    </p>
+                                )}
                                 <p className="order-date">
                                     {new Date(order.createdAt).toLocaleString()}
                                 </p>

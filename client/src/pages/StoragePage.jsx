@@ -33,7 +33,7 @@ export default function StoragePage() {
     }, [user, balance]);
 
     const handleOpenBox = async (storageId) => {
-        console.log('[DEBUG] 开盒前验证 - 目标物品:', storage.find(item => item._id === storageId));
+        console.log('开盒前验证 - 目标物品:', storage.find(item => item._id === storageId));
         try {
             setLoading(true);
             const result = await openBox({ storageId });
@@ -42,6 +42,7 @@ export default function StoragePage() {
                 alert(`成功获得: ${result.item.name} (${result.item.wearLevel})`);
                 updateBalance(result.balance);
                 setStorage(prev => prev.filter(item => item._id !== storageId));
+                window.location.reload();
             }
         } catch (error) {
             console.error('Failed to open box:', error);
@@ -52,12 +53,16 @@ export default function StoragePage() {
     };
 
     const handleSellItem = async (storageId) => {
+        console.log('卖出前验证 - 目标物品:', storage.find(item => item._id === storageId));
         try {
             setLoading(true);
-            const { data } = await sellItem({ storageId });
-            updateBalance(data.balance);
-            setStorage(prev => prev.filter(item => item._id !== storageId));
-            alert('物品已成功卖出！');
+            const result = await sellItem({ storageId });
+            if (result){
+                updateBalance(result.balance);
+                const updatedStorage = await getUserStorage();
+                setStorage(Array.isArray(updatedStorage) ? updatedStorage : []);
+                alert('物品已成功卖出！');
+            }
         } catch (error) {
             console.error('Failed to sell item:', error);
             alert('卖出失败: ' + error.message);

@@ -67,9 +67,9 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
     return (
         <div className="box-detail">
             <div className="box-header">
+                <Link to="/" className="back-home-btn">← 返回首页</Link>
                 {user?.role === 'user' && (
                     <div className="box-nav">
-                    <Link to="/" className="back-home-btn">← 返回首页</Link>
                     <Link to="/storage" className="back-storage-btn">我的仓库</Link>
                     </div>
                 )}
@@ -107,7 +107,7 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
                             <img src={item.image || '/placeholder-item.png'} alt={item.name} />
                             <div className="item-info">
                                 <h3>{item.name}</h3>
-                                <p>概率: {(item.probability * 100).toFixed(2)}%</p>
+                                <p>概率: {(item.probability * 100).toFixed(5)}%</p>
                                 <div className="wear-levels">
                                     {item.wearLevels.map((wear) => (
                                         <div key={wear.level} className="wear-level">

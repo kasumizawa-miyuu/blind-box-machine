@@ -21,13 +21,3 @@ export const getUserOrders = async (params = {}) => {
         throw error;
     }
 };
-
-export const sellItem = async (orderId) => {
-    const response = await api.post(`/orders/${orderId}/sell`);
-    return response;
-};
-
-export const getOrderDetail = async (orderId) => {
-    const response = await api.get(`/orders/${orderId}`);
-    return response;
-};

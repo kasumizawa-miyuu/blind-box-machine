@@ -150,9 +150,25 @@ exports.sellItem = async (req, res) => {
     const session = await mongoose.startSession();
     session.startTransaction();
 
+    console.log('卖出请求参数:', {
+        storageId: req.body.storageId,
+        userId: req.user.userId,
+        timestamp: new Date()
+    });
     try {
         const { storageId } = req.body;
         const userId = req.user.userId;
+
+        // 获取当前用户信息
+        const user = await User.findById(userId).session(session);
+        if (!user) {
+            await session.abortTransaction();
+            await session.endSession();
+            return res.status(404).json({
+                status: 'error',
+                message: '用户不存在'
+            });
+        }
 
         // 验证物品是否存在
         const item = await Storage.findOne({
@@ -160,6 +176,12 @@ exports.sellItem = async (req, res) => {
             user: userId,
             type: 'item'
         }).session(session);
+
+        console.log('数据库查询结果:', {
+            found: !!item,
+            actualUserId: item?.user?.toString(),
+            actualType: item?.type
+        });
 
         if (!item) {
             await session.abortTransaction();
@@ -184,7 +206,6 @@ exports.sellItem = async (req, res) => {
         });
 
         // 更新用户余额
-        const user = await User.findById(userId).session(session);
         user.balance += item.itemData.sellPrice;
 
         // 从仓库中移除物品
@@ -197,6 +218,7 @@ exports.sellItem = async (req, res) => {
         ]);
 
         await session.commitTransaction();
+        await session.endSession();
 
         res.json({
             status: 'success',
@@ -206,15 +228,17 @@ exports.sellItem = async (req, res) => {
             }
         });
     } catch (error) {
-        await session.abortTransaction();
+        if (session.inTransaction()){
+            await session.abortTransaction();
+        }
         console.error('卖出失败:', error);
+
+        await session.endSession();
         res.status(500).json({
             status: 'error',
             message: '卖出操作失败',
             details: process.env.NODE_ENV === 'development' ? error.message : undefined
         });
-    } finally {
-        session.endSession();
     }
 };
 

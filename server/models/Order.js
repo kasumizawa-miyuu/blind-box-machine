@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    box: { type: mongoose.Schema.Types.ObjectId, ref: 'Box', required: true },
+    box: { type: mongoose.Schema.Types.ObjectId, ref: 'Box'},
     item: {
         name: { type: String, required: true },
         image: { type: String },

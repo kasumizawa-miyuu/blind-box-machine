@@ -3,7 +3,6 @@ import api from './api';
 export const getUserStorage = async () => {
     try {
         const response = await api.get('/storage/user');
-
         console.log('仓库API响应数据:', response.data);
 
         return Array.isArray(response) ? response :
@@ -27,16 +26,27 @@ export const openBox = async (data) => {
 
         console.log('开盒成功响应:', response);
         return response.data;
-
     } catch (error) {
         console.error('开盒请求失败:', error);
         throw new Error(error.response?.data?.message || error.message || '开盒失败');
     }
 };
 
-export const sellItem = async (itemId) => {
-    const response = await api.post(`/storage/${itemId}/sell`);
-    return response;
+export const sellItem = async (data) => {
+    try {
+        console.log('发送卖出请求，数据:', data);
+        const response = await api.post('/storage/sell', data);
+
+        if (response.status !== 'success'){
+            throw new Error(response.message || '卖出操作失败');
+        }
+
+        console.log('卖出成功响应:', response);
+        return response.data;
+    } catch (error){
+        console.error('卖出请求失败:', error);
+        throw new Error(error.response?.data?.message || error.message || '卖出失败');
+    }
 };
 
 export const toggleItemVisibility = async (itemId) => {
