@@ -162,10 +162,12 @@ export default function StoragePage() {
 
     const handleToggleVisibility = async (itemId) => {
         try {
-            const result = await toggleItemVisibility(itemId);
-            setStorage(result.storage);
+            await toggleItemVisibility(itemId);
+            const updatedStorage = await getUserStorage();
+            setStorage(Array.isArray(updatedStorage) ? updatedStorage : []);
         } catch (error) {
-            console.error('Failed to toggle visibility:', error);
+            console.error('切换可见性失败:', error);
+            alert('切换可见性失败: ' + error.message);
         }
     };
 
@@ -222,9 +224,8 @@ export default function StoragePage() {
                                     <img
                                         src={
                                             item.type === 'unopened_box'
-                                                ? item.boxData?.image
-                                                : item.itemData?.image
-                                                || '/placeholder-item.png'
+                                                ? item.boxData?.image || '/placeholder-box.png'
+                                                : item.itemData?.image || '/placeholder-item.png'
                                         }
                                         alt={item.type === 'unopened_box' ? item.boxData?.name : item.itemData?.name}
                                     />

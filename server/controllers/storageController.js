@@ -268,7 +268,7 @@ exports.toggleItemVisibility = async (req, res) => {
         const userId = req.user.userId;
 
         const item = await Storage.findOneAndUpdate(
-            { _id: itemId, user: userId },
+            { _id: itemId, user: userId, type: 'item' },
             [{ $set: { isPublic: { $not: "$isPublic" } } }],
             { new: true }
         );
@@ -282,9 +282,7 @@ exports.toggleItemVisibility = async (req, res) => {
 
         res.json({
             status: 'success',
-            data: {
-                storage: await Storage.find({ user: userId }).sort({ createdAt: -1 })
-            }
+            data: item
         });
 
     } catch (error) {
@@ -292,6 +290,37 @@ exports.toggleItemVisibility = async (req, res) => {
         res.status(500).json({
             status: 'error',
             message: '切换可见性失败',
+        });
+    }
+};
+
+// 获取所有公开物品
+exports.getPublicItems = async (req, res) => {
+    try {
+        const items = await Storage.find({
+            isPublic: true,
+            type: 'item'
+        })
+            .populate('user', 'username')
+            .sort({ createdAt: -1 });
+
+        const formattedItems = items.map(item => ({
+            ...item.toObject(),
+            owner: {
+                _id: item.user._id,
+                username: item.user.username
+            }
+        }));
+
+        res.json({
+            status: 'success',
+            data: formattedItems
+        });
+    } catch (error) {
+        console.error('获取公开物品失败:', error);
+        res.status(500).json({
+            status: 'error',
+            message: '获取公开物品失败'
         });
     }
 };

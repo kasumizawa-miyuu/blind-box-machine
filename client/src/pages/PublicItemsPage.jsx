@@ -13,7 +13,9 @@ export default function PublicItemsPage() {
             setLoading(true);
             setError(null);
             try {
+                console.log('开始加载公开物品...');
                 const data = await getPublicItems();
+                console.log('获取到的公开物品数据:', data);
                 setItems(Array.isArray(data) ? data : []);
             } catch (error) {
                 console.error('Failed to load public items:', error);
@@ -43,13 +45,18 @@ export default function PublicItemsPage() {
                     {items.map(item => (
                         <div key={item._id} className="public-item">
                             <div className="item-image">
-                                <img src={item.image || '/placeholder-item.png'} alt={item.name} />
-                                <div className="owner-info">来自: {item.owner.username}</div>
+                                <img
+                                    src={item.itemData?.image || '/placeholder-item.png'}
+                                    alt={item.itemData?.name || '物品图片'}
+                                />
+                                <div className="owner-info">
+                                    来自: {item.owner.username || '未知用户'}
+                                </div>
                             </div>
                             <div className="item-info">
-                                <h3>{item.name}</h3>
-                                <p>磨损度: {item.wearLevel}</p>
-                                <p>价值: ¥{item.price}</p>
+                                <h3>{item.itemData?.name}</h3>
+                                <p>磨损度: {item.itemData?.wearLevel}</p>
+                                <p>价值: ¥{item.itemData?.sellPrice}</p>
                             </div>
                         </div>
                     ))}

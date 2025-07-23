@@ -41,16 +41,18 @@ exports.login = async (req, res) => {
             { expiresIn: '1d' }
         );
 
-        console.log('Login response:', { // 添加调试日志
+        console.log('Login response:', {
             token,
             role: user.role,
-            balance: user.balance
+            balance: user.balance,
+            user: user.username
         });
 
         res.json({
             token,
             role: user.role,
-            balance: user.balance
+            balance: user.balance,
+            user: user.username
         });
     } catch (error) {
         res.status(400).json({ error: error.message });

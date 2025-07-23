@@ -64,12 +64,26 @@ export const sellItem = async (data) => {
 };
 
 export const toggleItemVisibility = async (itemId) => {
-    const response = await api.patch(`/storage/${itemId}/visibility`);
-    return response;
+    try {
+        const response = await api.patch(`/storage/${itemId}/visibility`);
+        return response.data;
+    } catch (error) {
+        console.error('切换可见性失败:', error);
+        throw new Error(error.response?.data?.message || '切换可见性失败');
+    }
 };
 
-export const getPublicItems = async (userId = null) => {
-    const params = userId ? { userId } : {};
-    const response = await api.get('/storage/public', { params });
-    return Array.isArray(response.data) ? response.data : [];
+export const getPublicItems = async () => {
+    try {
+        console.log('正在请求公开物品...');
+        const response = await api.get('/storage/public');
+        console.log('公开物品响应:', {
+            status: response.status,
+            data: response.data
+        });
+        return response.data?.data || response.data || [];
+    } catch (error) {
+        console.error('获取公开物品失败:', error);
+        throw new Error(error.response?.data?.message || '获取公开物品失败');
+    }
 };

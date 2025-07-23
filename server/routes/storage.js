@@ -33,4 +33,16 @@ router.get('/user',
     controller.getUserStorage
 );
 
+// 切换物品可见性
+router.patch('/:itemId/visibility',
+    auth('user'),
+    controller.toggleItemVisibility
+);
+
+// 获取公开物品
+router.get('/public',
+    auth('user'),
+    controller.getPublicItems
+);
+
 module.exports = router;

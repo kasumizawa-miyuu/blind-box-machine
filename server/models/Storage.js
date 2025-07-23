@@ -11,7 +11,8 @@ const storageSchema = new mongoose.Schema({
     boxData: { type: Object },
     itemData: { type: Object },
     createdAt: { type: Date, default: Date.now },
-    openedAt: { type: Date }
+    openedAt: { type: Date },
+    isPublic: { type: Boolean, default: false}
 });
 
 module.exports = mongoose.model('Storage', storageSchema, 'storages');

@@ -16,9 +16,10 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         const token = localStorage.getItem('token');
         const role = localStorage.getItem('role');
+        const username = localStorage.getItem('username');
 
         if (token && role) {
-            setUser({ role });
+            setUser({ role, username });
             setBalance(parseInt(localStorage.getItem('balance')) || 0);
         }
         setIsInitializing(false);
@@ -32,22 +33,21 @@ export function AuthProvider({ children }) {
         setLoading(true);
         setError(null);
         try {
-            const { token, role, balance } = await apiLogin(credentials);
-            console.log('API返回的role:', role);
+            const { token, role, balance, username } = await apiLogin(credentials);
+            console.log('API返回的用户信息:', { token, role, balance, username });
 
             localStorage.setItem('token', token);
             localStorage.setItem('role', role);
             localStorage.setItem('balance', balance);
+            localStorage.setItem('username', username);
 
-            console.log('localStorage中的role:', localStorage.getItem('role')); // 调试日志
-
-            setUser({ role });
+            setUser({ role, username });
             setBalance(balance);
 
             // 根据角色重定向
             console.log('登录角色:', role);
             setTimeout(() => {
-                console.log('当前user状态:', { role }); // 调试
+                console.log('当前user状态:', { role });
                 navigate(role === 'admin' ? '/admin' : '/');
             }, 500);
         } catch (err) {
