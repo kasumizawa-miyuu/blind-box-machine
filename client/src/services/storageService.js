@@ -1,8 +1,22 @@
 import api from './api';
 
-export const getUserStorage = async () => {
+export const getUserStorage = async (params = {}) => {
     try {
-        const response = await api.get('/storage/user');
+        const response = await api.get('/storage/user', {
+            params: {
+                search: params.search,
+                type: params.type,
+                minPrice: params.minAmount,
+                maxPrice: params.maxAmount,
+                startDate: params.startDate,
+                endDate: params.endDate,
+                visibility: params.visibilityFilter,
+                page: params.page,
+                limit: params.limit,
+                sort: params.sortField,
+                order: params.sortDirection
+            }
+        });
         console.log('仓库API响应数据:', response.data);
 
         return Array.isArray(response) ? response :

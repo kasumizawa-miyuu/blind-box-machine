@@ -4,8 +4,8 @@ export const getUserOrders = async (params = {}) => {
     try {
         const response = await api.get('/orders/user', {
             params: {
-                page: 1,
-                limit: 10,
+                page: params.page || 1,
+                limit: params.limit || 10,
                 ...params
             }
         });
