@@ -1,4 +1,3 @@
-// components/FilterControls.jsx
 import './FilterControls.css';
 
 export default function FilterControls({
@@ -44,19 +43,21 @@ export default function FilterControls({
                 />
             </div>
 
-            <div className="control-group">
-                <select
-                    value={filterType}
-                    onChange={(e) => setFilterType(e.target.value)}
-                    className="filter-select"
-                >
-                    {filterOptions.map(option => (
-                        <option key={option.value} value={option.value}>
-                            {option.label}
-                        </option>
-                    ))}
-                </select>
-            </div>
+            {filterOptions && filterOptions.length > 0 && (
+                <div className="control-group">
+                    <select
+                        value={filterType}
+                        onChange={(e) => setFilterType(e.target.value)}
+                        className="filter-select"
+                    >
+                        {filterOptions.map(option => (
+                            <option key={option.value} value={option.value}>
+                                {option.label}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+            )}
 
             {showVisibilityFilter && (
                 <div className="control-group">

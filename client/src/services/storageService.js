@@ -73,15 +73,25 @@ export const toggleItemVisibility = async (itemId) => {
     }
 };
 
-export const getPublicItems = async () => {
+export const getPublicItems = async (params = {}) => {
     try {
-        console.log('正在请求公开物品...');
-        const response = await api.get('/storage/public');
-        console.log('公开物品响应:', {
-            status: response.status,
-            data: response.data
+        const response = await api.get('/storage/public', {
+            params: {
+                search: params.search,
+                type: params.type,
+                minPrice: params.minAmount,
+                maxPrice: params.maxAmount,
+                startDate: params.startDate,
+                endDate: params.endDate,
+                sort: params.sortField,
+                order: params.sortDirection,
+                page: params.page,
+                limit: params.limit
+            }
         });
-        return response.data?.data || response.data || [];
+
+        return Array.isArray(response.data) ? response.data :
+            Array.isArray(response.data?.data) ? response.data.data : [];
     } catch (error) {
         console.error('获取公开物品失败:', error);
         throw new Error(error.response?.data?.message || '获取公开物品失败');
