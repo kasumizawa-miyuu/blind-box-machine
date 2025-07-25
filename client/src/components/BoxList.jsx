@@ -41,7 +41,7 @@ export default function BoxList() {
                     type="text"
                     value={searchQuery}
                     onChange={handleSearchChange}
-                    placeholder="搜索盲盒..."
+                    placeholder="搜索武器箱..."
                 />
             </div>
 
@@ -50,7 +50,7 @@ export default function BoxList() {
             ) : (
                 <div className="boxes">
                     {boxes.length === 0 ? (
-                        <div className="no-boxes">暂无盲盒数据</div>
+                        <div className="no-boxes">暂无武器箱数据</div>
                     ) : (
                         boxes.map((box) => (
                             <div

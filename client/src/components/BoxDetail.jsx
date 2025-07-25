@@ -66,36 +66,35 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
 
     return (
         <div className="box-detail">
-            <div className="box-header">
+            <div className="box-nav">
                 <Link to="/" className="back-home-btn">← 返回首页</Link>
                 {user?.role === 'user' && (
-                    <div className="box-nav">
                     <Link to="/storage" className="back-storage-btn">我的仓库</Link>
-                    </div>
                 )}
-                <div className="box-content">
-                    <img src={box.image || '/placeholder-box.png'} alt={box.name} />
-                    <div className="box-info">
-                        <h1>{box.name}</h1>
-                        <p className="description">{box.description}</p>
-                        <p className="price">价格: ¥{box.price}</p>
+            </div>
 
-                        {user?.role === 'user' && (
-                            <div className="actions">
-                                <button
-                                    onClick={handlePurchase}
-                                    disabled={balance < box.price || loading}
-                                >
-                                    购买盲盒 (¥{box.price})
-                                </button>
-                                {balance < box.price && (
-                                    <p className="error">
-                                        余额不足，当前余额: ¥{balance}
-                                    </p>
-                                )}
-                            </div>
-                        )}
-                    </div>
+            <div className="box-content">
+                <img src={box.image || '/placeholder-box.png'} alt={box.name} />
+                <div className="box-info">
+                    <h1>{box.name}</h1>
+                    <p className="description">{box.description}</p>
+                    <p className="price">价格: ¥{box.price}</p>
+
+                    {user?.role === 'user' && (
+                        <div className="actions">
+                            <button
+                                onClick={handlePurchase}
+                                disabled={balance < box.price || loading}
+                            >
+                                购买盲盒 (¥{box.price})
+                            </button>
+                            {balance < box.price && (
+                                <p className="error">
+                                    余额不足，当前余额: ¥{balance}
+                                </p>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -122,5 +121,4 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
                 </div>
             </div>
         </div>
-    );
-}
+    );}

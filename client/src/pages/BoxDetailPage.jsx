@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import BoxDetail from '../components/BoxDetail';
 import { useAuth } from '../stores/auth.jsx';
+import './BoxDetailPage.css';
 
 export default function BoxDetailPage() {
     const { id } = useParams();
