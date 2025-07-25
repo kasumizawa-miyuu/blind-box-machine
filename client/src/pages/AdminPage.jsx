@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../stores/auth.jsx';
+import { registerAdmin } from '../services/authService';
 import { fetchBoxes, createBox, deleteBox, updateBox } from '../services/boxService';
 import BoxForm from '../components/BoxForm';
 import BoxDetail from "../components/BoxDetail";
@@ -31,6 +32,24 @@ export default function AdminPage() {
 
         loadBoxes();
     }, []);
+
+    const [showAdminForm, setShowAdminForm] = useState(false);
+    const [newAdminData, setNewAdminData] = useState({
+        username: '',
+        password: ''
+    });
+
+    const handleCreateAdmin = async () => {
+        try {
+            await registerAdmin(newAdminData);
+            alert('管理员创建成功');
+            setShowAdminForm(false);
+            setNewAdminData({ username: '', password: '' });
+        } catch (error) {
+            console.error('创建管理员失败:', error);
+            alert('创建管理员失败: ' + error.message);
+        }
+    };
 
     const handleCreateBox = async (boxData) => {
         try {
@@ -92,6 +111,9 @@ export default function AdminPage() {
                     <button onClick={() => setShowForm(!showForm)}>
                         {showForm ? '取消' : '添加新盲盒'}
                     </button>
+                    <button onClick={() => setShowAdminForm(!showAdminForm)}>
+                        {showAdminForm ? '取消' : '创建新管理员'}
+                    </button>
                     <button onClick={logout}>退出</button>
                 </div>
             </header>
@@ -117,6 +139,29 @@ export default function AdminPage() {
                     </button>
                 </div>
             </Modal>
+
+            {showAdminForm && (
+                <div className="admin-form-container">
+                    <h3>创建新管理员</h3>
+                    <div className="form-group">
+                        <label>用户名</label>
+                        <input
+                            type="text"
+                            value={newAdminData.username}
+                            onChange={(e) => setNewAdminData({...newAdminData, username: e.target.value})}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>密码</label>
+                        <input
+                            type="password"
+                            value={newAdminData.password}
+                            onChange={(e) => setNewAdminData({...newAdminData, password: e.target.value})}
+                        />
+                    </div>
+                    <button onClick={handleCreateAdmin}>创建</button>
+                </div>
+            )}
 
             {showForm && (
                 <div className="box-form-container">

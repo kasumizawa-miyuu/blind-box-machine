@@ -11,9 +11,12 @@ server.listen(port, () => {
     const User = require('./models/User');
     User.findOne({ role: 'admin' }).then(admin => {
         if (!admin) {
+            const adminUsername = process.env.DEFAULT_ADMIN_USERNAME || 'admin';
+            const adminPassword = process.env.DEFAULT_ADMIN_PASSWORD || 'admin123';
+
             const defaultAdmin = new User({
-                username: 'admin',
-                password: 'admin123',
+                username: adminUsername,
+                password: adminPassword,
                 role: 'admin'
             });
             defaultAdmin.save()

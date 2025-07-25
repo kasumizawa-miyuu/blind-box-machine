@@ -23,7 +23,6 @@ export default function App() {
                         path="/admin"
                         element={
                             <div>
-                                {console.log("正在渲染/admin路由")} {/* 检查是否执行 */}
                                 <ProtectedRoute role="admin">
                                     <AdminPage />
                                 </ProtectedRoute>
