@@ -67,7 +67,9 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
     return (
         <div className="box-detail">
             <div className="box-nav">
-                <Link to="/" className="back-home-btn">← 返回首页</Link>
+                {user?.role === 'user' && (
+                    <Link to="/" className="back-home-btn">← 返回首页</Link>
+                )}
                 {user?.role === 'user' && (
                     <Link to="/storage" className="back-storage-btn">我的仓库</Link>
                 )}

@@ -163,7 +163,7 @@ export default function OrdersPage() {
                             <div key={order._id} className={`order-item ${order.type}`}>
                                 <div className="order-image">
                                     <img
-                                        src={order.item?.image || '/placeholder-item.png'}
+                                        src={order.item?.image || order.box?.image || '/placeholder-item.png'}
                                         alt={order.item?.name || '物品'}
                                     />
                                 </div>
