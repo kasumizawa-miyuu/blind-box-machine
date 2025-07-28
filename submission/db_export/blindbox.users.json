@@ -1,0 +1,117 @@
+[{
+  "_id": {
+    "$oid": "68764b594dd94befd69145d1"
+  },
+  "username": "admin",
+  "password": "$2b$10$ar1FrwnKNnWi.LjVAXEpFuidhD7vNvaNYOfFgfnh7xHGP0xJGgvTm",
+  "role": "admin",
+  "balance": 1000,
+  "createdAt": {
+    "$date": "2025-07-15T12:36:41.661Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68764e2c41785d95c29d3bef"
+  },
+  "username": "kasumizawa_miyu",
+  "password": "$2b$10$6deb0AEhfUnDjBBD4vChv.JqD8jPsEBe8Q0xF5T49/UUAZEoEMphe",
+  "role": "user",
+  "balance": 0,
+  "createdAt": {
+    "$date": "2025-07-15T12:48:44.761Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "687cc897ba8396ea07bfc7e6"
+  },
+  "username": "test1",
+  "password": "$2b$10$uUXHkP29vMATotQiXfxnJufPShpjUMY8R5W0bZFzboYP9.t34d1rG",
+  "role": "user",
+  "balance": 862.01,
+  "createdAt": {
+    "$date": "2025-07-20T10:44:39.561Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6880990e95833de27079cd96"
+  },
+  "username": "test2",
+  "password": "$2b$10$BD784Qm1ZdEnewLH64aRxOQMVQ4mDpSXnUg5wespuy43fs1qIr03K",
+  "role": "user",
+  "balance": 773.0799999999999,
+  "createdAt": {
+    "$date": "2025-07-23T08:10:54.275Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688392adbd305c19ecbdb9f3"
+  },
+  "username": "administration",
+  "password": "$2b$10$eVp4QDdUCFE.nxRUZLUVy.AH.LxQiUAQpr2PeW.C3./w2OtKRSbOm",
+  "role": "admin",
+  "balance": 1000,
+  "createdAt": {
+    "$date": "2025-07-25T14:20:29.863Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6883aacebd305c19ecbddb90"
+  },
+  "username": "test3",
+  "password": "$2b$10$aL1.mKJ2eR8bkxNAd4FAxurYjxgv3gpt6K2EcuOOHAUz75T.fgI86",
+  "role": "user",
+  "balance": 1000,
+  "createdAt": {
+    "$date": "2025-07-25T16:03:26.679Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68876e180308bf874333e4cf"
+  },
+  "username": "example1",
+  "password": "$2b$10$kJQdZxeWhV4TtMPaSa23dORyrQmPzogJq1wOh/yCQi2//Rqh2GapW",
+  "role": "user",
+  "balance": 959.3900000000001,
+  "createdAt": {
+    "$date": "2025-07-28T12:33:28.802Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688770f50308bf87433441d8"
+  },
+  "username": "example",
+  "password": "$2b$10$8BiReMctZyKKg2BgLsnJC.YXXo//ecEpeKVPojbL7tyCcJmz3dpoi",
+  "role": "user",
+  "balance": 932.6500000000002,
+  "createdAt": {
+    "$date": "2025-07-28T12:45:41.667Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688773580308bf8743347836"
+  },
+  "username": "instance",
+  "password": "$2b$10$kgBsWY4oUIEvL9pvR.zq9uzIar/lELn/7N5AVQncw4vqdWPrArYZu",
+  "role": "user",
+  "balance": 0.42000000000077,
+  "createdAt": {
+    "$date": "2025-07-28T12:55:52.445Z"
+  },
+  "__v": 0
+}]

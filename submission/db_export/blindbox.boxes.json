@@ -1,0 +1,3327 @@
+[{
+  "_id": {
+    "$oid": "687e4fdb6c48044709abd788"
+  },
+  "name": "梦魇武器箱",
+  "description": "数据日期：25.7.21",
+  "price": 10,
+  "image": "http://localhost:3000/uploads/image-1753438434784-769448727.png",
+  "items": [
+    {
+      "name": "弯刀 | 传说",
+      "image": "http://localhost:3000/uploads/image-1753438496634-268771120.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2756,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd78a"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 2311,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd78b"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 2037,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd78c"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 2027,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd78d"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1651,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd78e"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd789"
+      }
+    },
+    {
+      "name": "弯刀 | 伽马多普勒",
+      "image": "http://localhost:3000/uploads/image-1753438594567-521939638.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 4562,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd790"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 6737,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd791"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd78f"
+      }
+    },
+    {
+      "name": "弯刀 | 澄澈之水",
+      "image": "http://localhost:3000/uploads/image-1753439477176-26370618.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1704,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd793"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1594,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd794"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1458,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd795"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1572,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd796"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1467,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd797"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd792"
+      }
+    },
+    {
+      "name": "弯刀 | 自动化",
+      "image": "http://localhost:3000/uploads/image-1753439485217-334666114.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 3093,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd799"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 2064,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd79a"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1958,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd79b"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 2887,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd79c"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1822,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd79d"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd798"
+      }
+    },
+    {
+      "name": "弯刀 | 自由之手",
+      "image": "http://localhost:3000/uploads/image-1753439494759-626322502.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1816,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd79f"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1746,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7a0"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1591,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7a1"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1549,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7a2"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1377,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7a3"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd79e"
+      }
+    },
+    {
+      "name": "弯刀 | 黑色层压板",
+      "image": "http://localhost:3000/uploads/image-1753439503615-139653902.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2257,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7a5"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1614,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7a6"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1439,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7a7"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1467,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7a8"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1318,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7a9"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7a4"
+      }
+    },
+    {
+      "name": "暗影双匕 | 传说",
+      "image": "http://localhost:3000/uploads/image-1753439611367-383623705.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2225,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ab"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1304,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ac"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1145,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ad"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1139,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ae"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1153,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7af"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7aa"
+      }
+    },
+    {
+      "name": "暗影双匕 | 伽马多普勒",
+      "image": "http://localhost:3000/uploads/image-1753439618359-522337647.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1925,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7b1"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 2183,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7b2"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7b0"
+      }
+    },
+    {
+      "name": "暗影双匕 | 澄澈之水",
+      "image": "http://localhost:3000/uploads/image-1753439625657-326691115.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 933,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7b4"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 867,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7b5"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 882,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7b6"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 962,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7b7"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 951,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7b8"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7b3"
+      }
+    },
+    {
+      "name": "暗影双匕 | 自动化",
+      "image": "http://localhost:3000/uploads/image-1753439631510-379275765.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1670,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ba"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1220,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7bb"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1098,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7bc"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1322,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7bd"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1143,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7be"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7b9"
+      }
+    },
+    {
+      "name": "暗影双匕 | 自由之手",
+      "image": "http://localhost:3000/uploads/image-1753439638468-677413538.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1279,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7c0"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1115,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7c1"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1053,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7c2"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1081,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7c3"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1323,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7c4"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7bf"
+      }
+    },
+    {
+      "name": "暗影双匕 | 黑色层压板",
+      "image": "http://localhost:3000/uploads/image-1753439647005-495968306.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1425,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7c6"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 908,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7c7"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 883,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7c8"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 878,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7c9"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 918,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ca"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7c5"
+      }
+    },
+    {
+      "name": "猎杀者匕首 | 传说",
+      "image": "http://localhost:3000/uploads/image-1753439725268-729277779.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2929,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7cc"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 2343,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7cd"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 2050,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ce"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1896,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7cf"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1554,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7d0"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7cb"
+      }
+    },
+    {
+      "name": "猎杀者匕首 | 伽马多普勒",
+      "image": "http://localhost:3000/uploads/image-1753439733118-316925834.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 4594,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7d2"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 4607,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7d3"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7d1"
+      }
+    },
+    {
+      "name": "猎杀者匕首 | 澄澈之水",
+      "image": "http://localhost:3000/uploads/image-1753439738904-424815956.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1786,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7d5"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1568,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7d6"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1356,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7d7"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1363,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7d8"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1409,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7d9"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7d4"
+      }
+    },
+    {
+      "name": "猎杀者匕首 | 自动化",
+      "image": "http://localhost:3000/uploads/image-1753439745912-589556178.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 3850,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7db"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 2221,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7dc"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1956,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7dd"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 2092,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7de"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1830,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7df"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7da"
+      }
+    },
+    {
+      "name": "猎杀者匕首 | 自由之手",
+      "image": "http://localhost:3000/uploads/image-1753439752514-114542473.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2004,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7e1"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1594,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7e2"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1489,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7e3"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 2619,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7e4"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1931,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7e5"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7e0"
+      }
+    },
+    {
+      "name": "猎杀者匕首 | 黑色层压板",
+      "image": "http://localhost:3000/uploads/image-1753439760744-761784111.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2791,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7e7"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1635,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7e8"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1565,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7e9"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1435,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ea"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1425,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7eb"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7e6"
+      }
+    },
+    {
+      "name": "蝴蝶刀 | 传说",
+      "image": "http://localhost:3000/uploads/image-1753439874534-305772133.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 30241,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ed"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 14488,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ee"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 14280,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ef"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 11538,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7f0"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 11192,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7f1"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7ec"
+      }
+    },
+    {
+      "name": "蝴蝶刀 | 伽马多普勒",
+      "image": "http://localhost:3000/uploads/image-1753439882598-427461729.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 28000,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7f3"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 26900,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7f4"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7f2"
+      }
+    },
+    {
+      "name": "蝴蝶刀 | 澄澈之水",
+      "image": "http://localhost:3000/uploads/image-1753439888781-677312202.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 12921,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7f6"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 11492,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7f7"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 12179,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7f8"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 11761,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7f9"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 9656,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7fa"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7f5"
+      }
+    },
+    {
+      "name": "蝴蝶刀 | 自动化",
+      "image": "http://localhost:3000/uploads/image-1753439895756-886370198.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 19938,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7fc"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 12947,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7fd"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 13088,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7fe"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 13055,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd7ff"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 12930,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd800"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd7fb"
+      }
+    },
+    {
+      "name": "蝴蝶刀 | 自由之手",
+      "image": "http://localhost:3000/uploads/image-1753439902323-75124426.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 12934,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd802"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 12575,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd803"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 12239,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd804"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 11006,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd805"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 10477,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd806"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd801"
+      }
+    },
+    {
+      "name": "蝴蝶刀 | 黑色层压板",
+      "image": "http://localhost:3000/uploads/image-1753439910264-165921790.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 14096,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd808"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 12923,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd809"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 14143,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd80a"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 12910,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd80b"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 12489,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd80c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd807"
+      }
+    },
+    {
+      "name": "鲍伊猎刀 | 传说",
+      "image": "http://localhost:3000/uploads/image-1753439973247-68517585.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 3725,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd80e"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 2231,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd80f"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1974,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd810"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1820,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd811"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1593,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd812"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd80d"
+      }
+    },
+    {
+      "name": "鲍伊猎刀 | 伽马多普勒",
+      "image": "http://localhost:3000/uploads/image-1753439979637-591053328.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 4451,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd814"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 4314,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd815"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd813"
+      }
+    },
+    {
+      "name": "鲍伊猎刀 | 澄澈之水",
+      "image": "http://localhost:3000/uploads/image-1753439986063-364589555.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1594,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd817"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1435,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd818"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1262,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd819"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1251,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd81a"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1413,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd81b"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd816"
+      }
+    },
+    {
+      "name": "鲍伊猎刀 | 自动化",
+      "image": "http://localhost:3000/uploads/image-1753439992385-243750448.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 4748,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd81d"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 2437,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd81e"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1939,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd81f"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 2357,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd820"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 2105,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd821"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd81c"
+      }
+    },
+    {
+      "name": "鲍伊猎刀 | 自由之手",
+      "image": "http://localhost:3000/uploads/image-1753440516685-68544918.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1750,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd823"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1651,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd824"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1542,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd825"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1366,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd826"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1366,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd827"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd822"
+      }
+    },
+    {
+      "name": "鲍伊猎刀 | 黑色层压板",
+      "image": "http://localhost:3000/uploads/image-1753440002210-614384412.png",
+      "probability": 0.0000853,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 1822,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd829"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1334,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd82a"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1292,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd82b"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1247,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd82c"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1324,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd82d"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd828"
+      }
+    },
+    {
+      "name": "AK-47 | 夜愿",
+      "image": "http://localhost:3000/uploads/image-1753440129776-338898535.png",
+      "probability": 0.0032,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 566.83,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd82f"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 133.88,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd830"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 67.19,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd831"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 55.06,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd832"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 38.98,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd833"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd82e"
+      }
+    },
+    {
+      "name": "MP9 | 星使",
+      "image": "http://localhost:3000/uploads/image-1753440141065-227844470.png",
+      "probability": 0.0032,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 132.44,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd835"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 49.03,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd836"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 21.53,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd837"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 23.47,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd838"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 15.72,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd839"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd834"
+      }
+    },
+    {
+      "name": "双持贝瑞塔 | 瓜瓜",
+      "image": "http://localhost:3000/uploads/image-1753440151870-985106536.png",
+      "probability": 0.0107,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 76.95,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd83b"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 28.85,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd83c"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 12.56,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd83d"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 9.4,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd83e"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 9.11,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd83f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd83a"
+      }
+    },
+    {
+      "name": "MP7 | 幽幻深渊",
+      "image": "http://localhost:3000/uploads/image-1753440161739-568931024.png",
+      "probability": 0.0107,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 78.46,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd841"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 26.92,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd842"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 11.7,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd843"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 9.47,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd844"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 10.05,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd845"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd840"
+      }
+    },
+    {
+      "name": "法玛斯 | 目皆转睛",
+      "image": "http://localhost:3000/uploads/image-1753440170578-308348315.png",
+      "probability": 0.0107,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 82.19,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd847"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 29.93,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd848"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 11.55,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd849"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 9.9,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd84a"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 9.4,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd84b"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd846"
+      }
+    },
+    {
+      "name": "XM1014 | 行尸攻势",
+      "image": "http://localhost:3000/uploads/image-1753440178114-4324301.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 11.84,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd84d"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 4.59,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd84e"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 2.15,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd84f"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 2.22,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd850"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 2.22,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd851"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd84c"
+      }
+    },
+    {
+      "name": "G3SG1 | 梦之林地",
+      "image": "http://localhost:3000/uploads/image-1753440187226-994061076.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 14.28,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd853"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 4.73,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd854"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 2.01,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd855"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 2.01,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd856"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 2.01,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd857"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd852"
+      }
+    },
+    {
+      "name": "M4A1消音型 | 夜无眠",
+      "image": "http://localhost:3000/uploads/image-1753440194795-94027150.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 13.85,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd859"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 6.24,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd85a"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 3.66,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd85b"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 7.25,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd85c"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 9.33,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd85d"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd858"
+      }
+    },
+    {
+      "name": "USP消音版 | 地狱门票",
+      "image": "http://localhost:3000/uploads/image-1753440203481-739134473.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 15,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd85f"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 5.88,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd860"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 2.44,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd861"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 4.3,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd862"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 2.08,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd863"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd85e"
+      }
+    },
+    {
+      "name": "PP-野牛 | 太空猫",
+      "image": "http://localhost:3000/uploads/image-1753440211525-549566169.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 12.7,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd865"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 5.45,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd866"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 2.08,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd867"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 2.44,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd868"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 2.08,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd869"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd864"
+      }
+    },
+    {
+      "name": "MAG-7 | 先见之明",
+      "image": "http://localhost:3000/uploads/image-1753440299753-140900622.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2.44,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd86b"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd86c"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd86d"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd86e"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd86f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd86a"
+      }
+    },
+    {
+      "name": "MP5-SD | 小小噩梦",
+      "image": "http://localhost:3000/uploads/image-1753440312070-403864123.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2.72,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd871"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 0.86,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd872"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd873"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd874"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd875"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd870"
+      }
+    },
+    {
+      "name": "P2000 | 升天",
+      "image": "http://localhost:3000/uploads/image-1753440325191-60781872.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2.79,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd877"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 0.86,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd878"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd879"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.43,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd87a"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd87b"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd876"
+      }
+    },
+    {
+      "name": "SCAR-20 | 暗夜活死鸡",
+      "image": "http://localhost:3000/uploads/image-1753440333516-366600777.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2.22,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd87d"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd87e"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd87f"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd880"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd881"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd87c"
+      }
+    },
+    {
+      "name": "MAC-10 | 坐牢",
+      "image": "http://localhost:3000/uploads/image-1753440344737-288197053.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 3.37,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd883"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 0.93,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd884"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd885"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.43,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd886"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd887"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd882"
+      }
+    },
+    {
+      "name": "截短霰弹枪 | 灵应牌",
+      "image": "http://localhost:3000/uploads/image-1753440351656-797710519.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 3.51,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd889"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 0.86,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd88a"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd88b"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd88c"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.43,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd88d"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd888"
+      }
+    },
+    {
+      "name": "FN57 | 涂鸦潦草",
+      "image": "http://localhost:3000/uploads/image-1753440357684-685741683.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 3.01,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd88f"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 0.93,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd890"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd891"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.43,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd892"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.5,
+          "_id": {
+            "$oid": "687e4fdb6c48044709abd893"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "687e4fdb6c48044709abd88e"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-07-21T14:34:03.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68876df70308bf874333e422"
+  },
+  "name": "画廊武器箱",
+  "description": "数据日期：25.7.28",
+  "price": 3.8,
+  "image": "http://localhost:3000/uploads/image-1753703398144-679759954.png",
+  "items": [
+    {
+      "name": "廓尔喀刀",
+      "image": "http://localhost:3000/uploads/image-1753703421145-826338328.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2574,
+          "_id": {
+            "$oid": "68876df70308bf874333e424"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e423"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 人工染色",
+      "image": "http://localhost:3000/uploads/image-1753703663675-737288803.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2472,
+          "_id": {
+            "$oid": "68876df70308bf874333e426"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1170,
+          "_id": {
+            "$oid": "68876df70308bf874333e427"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1029,
+          "_id": {
+            "$oid": "68876df70308bf874333e428"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 919,
+          "_id": {
+            "$oid": "68876df70308bf874333e429"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 999,
+          "_id": {
+            "$oid": "68876df70308bf874333e42a"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e425"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 北方森林",
+      "image": "http://localhost:3000/uploads/image-1753703845562-493826040.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2100,
+          "_id": {
+            "$oid": "68876df70308bf874333e42c"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 982,
+          "_id": {
+            "$oid": "68876df70308bf874333e42d"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 734,
+          "_id": {
+            "$oid": "68876df70308bf874333e42e"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 866,
+          "_id": {
+            "$oid": "68876df70308bf874333e42f"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 710,
+          "_id": {
+            "$oid": "68876df70308bf874333e430"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e42b"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 夜色",
+      "image": "http://localhost:3000/uploads/image-1753703987635-272449199.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2940,
+          "_id": {
+            "$oid": "68876df70308bf874333e432"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1048,
+          "_id": {
+            "$oid": "68876df70308bf874333e433"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 958,
+          "_id": {
+            "$oid": "68876df70308bf874333e434"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 909,
+          "_id": {
+            "$oid": "68876df70308bf874333e435"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 872,
+          "_id": {
+            "$oid": "68876df70308bf874333e436"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e431"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 屠夫",
+      "image": "http://localhost:3000/uploads/image-1753704160197-677449416.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 3406,
+          "_id": {
+            "$oid": "68876df70308bf874333e438"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 2096,
+          "_id": {
+            "$oid": "68876df70308bf874333e439"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1925,
+          "_id": {
+            "$oid": "68876df70308bf874333e43a"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e437"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 枯焦之色",
+      "image": "http://localhost:3000/uploads/image-1753704221417-766509315.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2720,
+          "_id": {
+            "$oid": "68876df70308bf874333e43c"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1023,
+          "_id": {
+            "$oid": "68876df70308bf874333e43d"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 864,
+          "_id": {
+            "$oid": "68876df70308bf874333e43e"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 900,
+          "_id": {
+            "$oid": "68876df70308bf874333e43f"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 808,
+          "_id": {
+            "$oid": "68876df70308bf874333e440"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e43b"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 森林 DDPAT",
+      "image": "http://localhost:3000/uploads/image-1753704321238-774637781.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2222,
+          "_id": {
+            "$oid": "68876df70308bf874333e442"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 990,
+          "_id": {
+            "$oid": "68876df70308bf874333e443"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 785,
+          "_id": {
+            "$oid": "68876df70308bf874333e444"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 795,
+          "_id": {
+            "$oid": "68876df70308bf874333e445"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 756,
+          "_id": {
+            "$oid": "68876df70308bf874333e446"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e441"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 深红之网",
+      "image": "http://localhost:3000/uploads/image-1753704384634-430718949.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 8268,
+          "_id": {
+            "$oid": "68876df70308bf874333e448"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1999,
+          "_id": {
+            "$oid": "68876df70308bf874333e449"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1384,
+          "_id": {
+            "$oid": "68876df70308bf874333e44a"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1249,
+          "_id": {
+            "$oid": "68876df70308bf874333e44b"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1115,
+          "_id": {
+            "$oid": "68876df70308bf874333e44c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e447"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 渐变之色",
+      "image": "http://localhost:3000/uploads/image-1753704481378-710907831.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 4788,
+          "_id": {
+            "$oid": "68876df70308bf874333e44e"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 3899,
+          "_id": {
+            "$oid": "68876df70308bf874333e44f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e44d"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 狩猎网格",
+      "image": "http://localhost:3000/uploads/image-1753704522142-43835737.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2306,
+          "_id": {
+            "$oid": "68876df70308bf874333e451"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 933,
+          "_id": {
+            "$oid": "68876df70308bf874333e452"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 690,
+          "_id": {
+            "$oid": "68876df70308bf874333e453"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 720,
+          "_id": {
+            "$oid": "68876df70308bf874333e454"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 723,
+          "_id": {
+            "$oid": "68876df70308bf874333e455"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e450"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 蓝钢",
+      "image": "http://localhost:3000/uploads/image-1753704574850-241960825.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 4032,
+          "_id": {
+            "$oid": "68876df70308bf874333e457"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1377,
+          "_id": {
+            "$oid": "68876df70308bf874333e458"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1183,
+          "_id": {
+            "$oid": "68876df70308bf874333e459"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1098,
+          "_id": {
+            "$oid": "68876df70308bf874333e45a"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1134,
+          "_id": {
+            "$oid": "68876df70308bf874333e45b"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e456"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 表面淬火",
+      "image": "http://localhost:3000/uploads/image-1753704626221-730639881.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 4513,
+          "_id": {
+            "$oid": "68876df70308bf874333e45d"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1629,
+          "_id": {
+            "$oid": "68876df70308bf874333e45e"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 1350,
+          "_id": {
+            "$oid": "68876df70308bf874333e45f"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 1227,
+          "_id": {
+            "$oid": "68876df70308bf874333e460"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 1285,
+          "_id": {
+            "$oid": "68876df70308bf874333e461"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e45c"
+      }
+    },
+    {
+      "name": "廓尔喀刀 | 都市伪装",
+      "image": "http://localhost:3000/uploads/image-1753704672826-21043362.png",
+      "probability": 0.0001969,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 3629,
+          "_id": {
+            "$oid": "68876df70308bf874333e463"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1049,
+          "_id": {
+            "$oid": "68876df70308bf874333e464"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 889,
+          "_id": {
+            "$oid": "68876df70308bf874333e465"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 839,
+          "_id": {
+            "$oid": "68876df70308bf874333e466"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 827,
+          "_id": {
+            "$oid": "68876df70308bf874333e467"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e462"
+      }
+    },
+    {
+      "name": "格洛克18型 | 大金牙",
+      "image": "http://localhost:3000/uploads/image-1753704753906-809357219.png",
+      "probability": 0.0032,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 458.73,
+          "_id": {
+            "$oid": "68876df70308bf874333e469"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 117,
+          "_id": {
+            "$oid": "68876df70308bf874333e46a"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 48.01,
+          "_id": {
+            "$oid": "68876df70308bf874333e46b"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 56.65,
+          "_id": {
+            "$oid": "68876df70308bf874333e46c"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 53.03,
+          "_id": {
+            "$oid": "68876df70308bf874333e46d"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e468"
+      }
+    },
+    {
+      "name": "M4A1消音型 | 蒸汽波",
+      "image": "http://localhost:3000/uploads/image-1753704831527-141502134.png",
+      "probability": 0.0032,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 2034.5,
+          "_id": {
+            "$oid": "68876df70308bf874333e46f"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 792.84,
+          "_id": {
+            "$oid": "68876df70308bf874333e470"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 389.9,
+          "_id": {
+            "$oid": "68876df70308bf874333e471"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 350,
+          "_id": {
+            "$oid": "68876df70308bf874333e472"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 290.69,
+          "_id": {
+            "$oid": "68876df70308bf874333e473"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e46e"
+      }
+    },
+    {
+      "name": "UMP-45 | 黑色魅影",
+      "image": "http://localhost:3000/uploads/image-1753704893022-149142480.png",
+      "probability": 0.01067,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 184.42,
+          "_id": {
+            "$oid": "68876df70308bf874333e475"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 68.47,
+          "_id": {
+            "$oid": "68876df70308bf874333e476"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 31.82,
+          "_id": {
+            "$oid": "68876df70308bf874333e477"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 23.44,
+          "_id": {
+            "$oid": "68876df70308bf874333e478"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 21.86,
+          "_id": {
+            "$oid": "68876df70308bf874333e479"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e474"
+      }
+    },
+    {
+      "name": "P250 | 震中",
+      "image": "http://localhost:3000/uploads/image-1753704981338-39118055.png",
+      "probability": 0.01067,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 152.02,
+          "_id": {
+            "$oid": "68876df80308bf874333e47b"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 67.76,
+          "_id": {
+            "$oid": "68876df80308bf874333e47c"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 29.79,
+          "_id": {
+            "$oid": "68876df80308bf874333e47d"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 33,
+          "_id": {
+            "$oid": "68876df80308bf874333e47e"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 24.86,
+          "_id": {
+            "$oid": "68876df80308bf874333e47f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df70308bf874333e47a"
+      }
+    },
+    {
+      "name": "AK-47 | 局外人",
+      "image": "http://localhost:3000/uploads/image-1753705033941-345024759.png",
+      "probability": 0.01067,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 451.28,
+          "_id": {
+            "$oid": "68876df80308bf874333e481"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 84.7,
+          "_id": {
+            "$oid": "68876df80308bf874333e482"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 39.85,
+          "_id": {
+            "$oid": "68876df80308bf874333e483"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 28.05,
+          "_id": {
+            "$oid": "68876df80308bf874333e484"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 24.07,
+          "_id": {
+            "$oid": "68876df80308bf874333e485"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e480"
+      }
+    },
+    {
+      "name": "M4A4 | 涡轮",
+      "image": "http://localhost:3000/uploads/image-1753705128733-838968339.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 50.6,
+          "_id": {
+            "$oid": "68876df80308bf874333e487"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 9.96,
+          "_id": {
+            "$oid": "68876df80308bf874333e488"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 4.06,
+          "_id": {
+            "$oid": "68876df80308bf874333e489"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 4.24,
+          "_id": {
+            "$oid": "68876df80308bf874333e48a"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 3.45,
+          "_id": {
+            "$oid": "68876df80308bf874333e48b"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e486"
+      }
+    },
+    {
+      "name": "MAC-10 | 赛博恶魔",
+      "image": "http://localhost:3000/uploads/image-1753705170245-840384644.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 28.24,
+          "_id": {
+            "$oid": "68876df80308bf874333e48d"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 9.36,
+          "_id": {
+            "$oid": "68876df80308bf874333e48e"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 3.87,
+          "_id": {
+            "$oid": "68876df80308bf874333e48f"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 5.59,
+          "_id": {
+            "$oid": "68876df80308bf874333e490"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 3.51,
+          "_id": {
+            "$oid": "68876df80308bf874333e491"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e48c"
+      }
+    },
+    {
+      "name": "双持贝瑞塔 | 水枪冲击",
+      "image": "http://localhost:3000/uploads/image-1753705222407-286313687.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 33.61,
+          "_id": {
+            "$oid": "68876df80308bf874333e493"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 9.95,
+          "_id": {
+            "$oid": "68876df80308bf874333e494"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 4.06,
+          "_id": {
+            "$oid": "68876df80308bf874333e495"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 4.98,
+          "_id": {
+            "$oid": "68876df80308bf874333e496"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 3.18,
+          "_id": {
+            "$oid": "68876df80308bf874333e497"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e492"
+      }
+    },
+    {
+      "name": "P90 | 兰迪快冲",
+      "image": "http://localhost:3000/uploads/image-1753705269450-842247640.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 25.08,
+          "_id": {
+            "$oid": "68876df80308bf874333e499"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 7,
+          "_id": {
+            "$oid": "68876df80308bf874333e49a"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 3.43,
+          "_id": {
+            "$oid": "68876df80308bf874333e49b"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 4.01,
+          "_id": {
+            "$oid": "68876df80308bf874333e49c"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 3.61,
+          "_id": {
+            "$oid": "68876df80308bf874333e49d"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e498"
+      }
+    },
+    {
+      "name": "SSG08 | 致命站点",
+      "image": "http://localhost:3000/uploads/image-1753705317489-187085949.png",
+      "probability": 0.03196,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 42.29,
+          "_id": {
+            "$oid": "68876df80308bf874333e49f"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 14.35,
+          "_id": {
+            "$oid": "68876df80308bf874333e4a0"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 4.71,
+          "_id": {
+            "$oid": "68876df80308bf874333e4a1"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 4.87,
+          "_id": {
+            "$oid": "68876df80308bf874333e4a2"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 3.2,
+          "_id": {
+            "$oid": "68876df80308bf874333e4a3"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e49e"
+      }
+    },
+    {
+      "name": "M249 | 催眠术",
+      "image": "http://localhost:3000/uploads/image-1753705419215-772459893.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 6.66,
+          "_id": {
+            "$oid": "68876df80308bf874333e4a5"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1.09,
+          "_id": {
+            "$oid": "68876df80308bf874333e4a6"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.53,
+          "_id": {
+            "$oid": "68876df80308bf874333e4a7"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.35,
+          "_id": {
+            "$oid": "68876df80308bf874333e4a8"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.29,
+          "_id": {
+            "$oid": "68876df80308bf874333e4a9"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e4a4"
+      }
+    },
+    {
+      "name": "MP5-SD | 静态学",
+      "image": "http://localhost:3000/uploads/image-1753705483200-415130436.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 6.02,
+          "_id": {
+            "$oid": "68876df80308bf874333e4ab"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1.14,
+          "_id": {
+            "$oid": "68876df80308bf874333e4ac"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.5,
+          "_id": {
+            "$oid": "68876df80308bf874333e4ad"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.37,
+          "_id": {
+            "$oid": "68876df80308bf874333e4ae"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.41,
+          "_id": {
+            "$oid": "68876df80308bf874333e4af"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e4aa"
+      }
+    },
+    {
+      "name": "USP消音版 | 27",
+      "image": "http://localhost:3000/uploads/image-1753705534793-928621442.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 6.8,
+          "_id": {
+            "$oid": "68876df80308bf874333e4b1"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1.13,
+          "_id": {
+            "$oid": "68876df80308bf874333e4b2"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.66,
+          "_id": {
+            "$oid": "68876df80308bf874333e4b3"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.51,
+          "_id": {
+            "$oid": "68876df80308bf874333e4b4"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.39,
+          "_id": {
+            "$oid": "68876df80308bf874333e4b5"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e4b0"
+      }
+    },
+    {
+      "name": "AUG | 豪华装饰",
+      "image": "http://localhost:3000/uploads/image-1753705578302-11079135.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 6.23,
+          "_id": {
+            "$oid": "68876df80308bf874333e4b7"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1.21,
+          "_id": {
+            "$oid": "68876df80308bf874333e4b8"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.51,
+          "_id": {
+            "$oid": "68876df80308bf874333e4b9"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.41,
+          "_id": {
+            "$oid": "68876df80308bf874333e4ba"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.44,
+          "_id": {
+            "$oid": "68876df80308bf874333e4bb"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e4b6"
+      }
+    },
+    {
+      "name": "SCAR-20 | 开拓者",
+      "image": "http://localhost:3000/uploads/image-1753705617954-8852235.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 4.3,
+          "_id": {
+            "$oid": "68876df80308bf874333e4bd"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1.33,
+          "_id": {
+            "$oid": "68876df80308bf874333e4be"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.49,
+          "_id": {
+            "$oid": "68876df80308bf874333e4bf"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.5,
+          "_id": {
+            "$oid": "68876df80308bf874333e4c0"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.39,
+          "_id": {
+            "$oid": "68876df80308bf874333e4c1"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e4bc"
+      }
+    },
+    {
+      "name": "R8左轮手枪 | 探戈",
+      "image": "http://localhost:3000/uploads/image-1753705658950-81752667.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 6.88,
+          "_id": {
+            "$oid": "68876df80308bf874333e4c3"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1.73,
+          "_id": {
+            "$oid": "68876df80308bf874333e4c4"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.56,
+          "_id": {
+            "$oid": "68876df80308bf874333e4c5"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.54,
+          "_id": {
+            "$oid": "68876df80308bf874333e4c6"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.31,
+          "_id": {
+            "$oid": "68876df80308bf874333e4c7"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e4c2"
+      }
+    },
+    {
+      "name": "沙漠之鹰 | 书法涂鸦",
+      "image": "http://localhost:3000/uploads/image-1753705699212-405344181.png",
+      "probability": 0.11417,
+      "wearLevels": [
+        {
+          "level": "崭新出厂",
+          "price": 8.81,
+          "_id": {
+            "$oid": "68876df80308bf874333e4c9"
+          }
+        },
+        {
+          "level": "略有磨损",
+          "price": 1.33,
+          "_id": {
+            "$oid": "68876df80308bf874333e4ca"
+          }
+        },
+        {
+          "level": "久经沙场",
+          "price": 0.7,
+          "_id": {
+            "$oid": "68876df80308bf874333e4cb"
+          }
+        },
+        {
+          "level": "破损不堪",
+          "price": 0.55,
+          "_id": {
+            "$oid": "68876df80308bf874333e4cc"
+          }
+        },
+        {
+          "level": "战痕累累",
+          "price": 0.46,
+          "_id": {
+            "$oid": "68876df80308bf874333e4cd"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68876df80308bf874333e4c8"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-07-28T12:32:56.017Z"
+  },
+  "__v": 0
+}]
