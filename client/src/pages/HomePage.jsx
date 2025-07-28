@@ -15,7 +15,7 @@ export default function HomePage() {
                         {user ? (
                             <>
                                 <span className="username">欢迎, {user.username}</span>
-                                <span className="balance">余额: ¥{balance}</span>
+                                <span className="balance">余额: ¥{balance.toFixed(2)}</span>
                             </>
                         ) : (
                             <span className="username">请先登录</span>

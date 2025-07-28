@@ -114,7 +114,7 @@ export default function FilterControls({
             )}
 
             {showDateFilter && (
-                <div className="control-group">
+                <div className="date-filter-group">
                     <input
                         type="date"
                         value={startDate}

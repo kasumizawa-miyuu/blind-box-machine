@@ -162,10 +162,10 @@ export default function BoxForm({ onSubmit, initialBox }) {
 
     return (
         <form onSubmit={handleSubmit} className="box-form">
-            <h3>添加新盲盒</h3>
+            <h3>添加新武器箱</h3>
 
             <div className="form-group">
-                <label>盲盒名称</label>
+                <label>武器箱名称</label>
                 <input
                     type="text"
                     name="name"
@@ -198,7 +198,7 @@ export default function BoxForm({ onSubmit, initialBox }) {
             </div>
 
             <div className="form-group">
-                <label>盲盒图片</label>
+                <label>武器箱图片</label>
                 <input
                     type="file"
                     accept="image/*"
@@ -211,7 +211,7 @@ export default function BoxForm({ onSubmit, initialBox }) {
                         {typeof box.image === 'object' ? (
                             <img src={box.image} alt="预览" />
                         ) : (
-                            <img src={box.image} alt="盲盒图片" />
+                            <img src={box.image} alt="武器箱图片" />
                         )}
                     </div>
                 )}

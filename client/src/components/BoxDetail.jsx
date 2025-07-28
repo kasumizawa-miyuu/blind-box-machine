@@ -26,7 +26,7 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
                     const data = await fetchBoxDetail(boxId);
                     setBox(data);
                 } catch (error) {
-                    setError('获取盲盒详情失败');
+                    setError('获取武器箱详情失败');
                     console.error('Failed to fetch box detail:', error);
                 } finally {
                     setLoading(false);
@@ -50,7 +50,7 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
             console.log('正在发送购买请求...');
             const result = await purchaseBox(box._id);
             console.log('收到响应:', result);
-            alert('购买成功，盲盒已添加到仓库');
+            alert('购买成功，武器箱已添加到仓库');
             updateBalance(result.balance);
         } catch (error) {
             setError(error.message || '购买失败');
@@ -62,7 +62,7 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
 
     if (loading) return <div className="loading">加载中...</div>;
     if (error) return <div className="error">{error}</div>;
-    if (!box) return <div className="not-found">盲盒未找到</div>;
+    if (!box) return <div className="not-found">武器箱未找到</div>;
 
     return (
         <div className="box-detail">
@@ -86,7 +86,7 @@ export default function BoxDetail({ boxId, box: propBox, adminView}) {
                                 onClick={handlePurchase}
                                 disabled={balance < box.price || loading}
                             >
-                                购买盲盒 (¥{box.price})
+                                购买武器箱 (¥{box.price})
                             </button>
                             {balance < box.price && (
                                 <p className="error">

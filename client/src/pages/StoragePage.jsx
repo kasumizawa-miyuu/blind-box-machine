@@ -7,7 +7,7 @@ import './StoragePage.css';
 
 const storageFilterOptions = [
     { value: 'all', label: '所有类型' },
-    { value: 'unopened_box', label: '未开盲盒' },
+    { value: 'unopened_box', label: '未开武器箱' },
     { value: 'item', label: '物品' }
 ];
 
@@ -181,7 +181,7 @@ export default function StoragePage() {
                     <Link to="/" className="back-home-btn">← 返回首页</Link>
                     <h1>我的仓库</h1>
                 </div>
-                <div className="balance">当前余额: ¥{balance}</div>
+                <div className="balance">余额: ¥{balance.toFixed(2)}</div>
             </header>
 
             <FilterControls
@@ -243,6 +243,7 @@ export default function StoragePage() {
                                             <button
                                                 onClick={() => handleOpenBox(item._id)}
                                                 disabled={loading}
+                                                className="storage-item"
                                             >
                                                 抽取
                                             </button>

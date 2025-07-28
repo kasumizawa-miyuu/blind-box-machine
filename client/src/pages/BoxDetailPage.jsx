@@ -18,7 +18,7 @@ export default function BoxDetailPage() {
             <BoxDetail boxId={id} />
             {!isAuthenticated && (
                 <div className="login-prompt">
-                    <p>登录后可购买盲盒</p>
+                    <p>登录后可购买武器箱</p>
                 </div>
             )}
         </div>

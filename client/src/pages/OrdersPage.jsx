@@ -124,7 +124,7 @@ export default function OrdersPage() {
                     <Link to="/" className="back-home-btn">← 返回首页</Link>
                     <h1>我的订单</h1>
                 </div>
-                <div className="balance">当前余额: ¥{balance}</div>
+                <div className="balance">余额: ¥{balance.toFixed(2)}</div>
             </header>
 
             <FilterControls
@@ -170,7 +170,7 @@ export default function OrdersPage() {
                                 <div className="order-details">
                                     <h3>{order.item?.name || '未知物品'}</h3>
                                     {order.item?.wearLevel && <p>磨损度: {order.item.wearLevel}</p>}
-                                    {order.box && <p>盲盒: {order.box.name}</p>}
+                                    {order.box && <p>武器箱: {order.box.name}</p>}
                                     {order.type !== 'open_box' && (
                                         <p className="order-amount">
                                             {order.type === 'purchase' && '购买'}

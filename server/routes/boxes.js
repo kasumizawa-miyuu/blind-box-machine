@@ -6,7 +6,7 @@ const validate = require('../middlewares/validate');
 const authMiddleware = require('../middlewares/auth');
 const Joi = require('joi');
 
-// 获取所有盲盒
+// 获取所有武器箱
 router.get('/', async (req, res) => {
     try {
         const { search } = req.query;
@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// 获取单个盲盒详情
+// 获取单个武器箱详情
 router.get('/:id', async (req, res) => {
     try {
         const box = await Box.findById(req.params.id);
@@ -34,7 +34,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// 管理员创建盲盒
+// 管理员创建武器箱
 router.post('/', authMiddleware('admin'), async (req, res) => {
     try {
         const box = new Box(req.body);
@@ -45,7 +45,7 @@ router.post('/', authMiddleware('admin'), async (req, res) => {
     }
 });
 
-// 管理员更新盲盒
+// 管理员更新武器箱
 router.put('/:id', authMiddleware('admin'), async (req, res) => {
     try {
         const box = await Box.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -56,7 +56,7 @@ router.put('/:id', authMiddleware('admin'), async (req, res) => {
     }
 });
 
-// 管理员删除盲盒
+// 管理员删除武器箱
 router.delete('/:id', authMiddleware('admin'), async (req, res) => {
     try {
         const box = await Box.findByIdAndDelete(req.params.id);
@@ -67,7 +67,7 @@ router.delete('/:id', authMiddleware('admin'), async (req, res) => {
     }
 });
 
-// 购买盲盒
+// 购买武器箱
 router.post('/purchase',
     authMiddleware('user'),
     validate({

@@ -49,7 +49,7 @@ exports.createBox = async (req, res) => {
         res.status(201).json(box);
     } catch (error) {
         res.status(400).json({
-            error: '创建盲盒失败',
+            error: '创建武器箱失败',
             details: error.message
         });
     }
@@ -73,7 +73,7 @@ exports.updateBox = async (req, res) => {
         res.json(box);
     } catch (error) {
         res.status(400).json({
-            error: '更新盲盒失败',
+            error: '更新武器箱失败',
             details: error.message
         });
     }
@@ -89,7 +89,7 @@ exports.deleteBox = async (req, res) => {
     }
 };
 
-// 购买盲盒
+// 购买武器箱
 exports.purchaseBox = async (req, res) => {
     const session = await mongoose.startSession();
     console.log('收到购买请求，body:', req.body);
@@ -101,11 +101,11 @@ exports.purchaseBox = async (req, res) => {
         console.log('正在处理boxId:', boxId);
         const userId = req.user.userId;
 
-        // 验证盲盒是否存在
+        // 验证武器箱是否存在
         const box = await Box.findById(boxId).session(session);
         if (!box) {
             await session.abortTransaction();
-            return res.status(404).json({ error: '盲盒不存在' });
+            return res.status(404).json({ error: '武器箱不存在' });
         }
 
         // 验证用户余额

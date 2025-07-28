@@ -109,7 +109,7 @@ export default function AdminPage() {
                 <h1>管理员后台</h1>
                 <div className="admin-actions">
                     <button onClick={() => setShowForm(!showForm)}>
-                        {showForm ? '取消' : '添加新盲盒'}
+                        {showForm ? '取消' : '添加新武器箱'}
                     </button>
                     <button onClick={() => setShowAdminForm(!showAdminForm)}>
                         {showAdminForm ? '取消' : '创建新管理员'}
@@ -123,7 +123,7 @@ export default function AdminPage() {
                 onClose={cancelDelete}
                 title="确认删除"
             >
-                <p>确定要删除这个盲盒吗？此操作不可撤销。</p>
+                <p>确定要删除这个武器箱吗？此操作不可撤销。</p>
                 <div className="modal-footer">
                     <button
                         onClick={cancelDelete}

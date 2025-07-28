@@ -5,7 +5,7 @@ const auth = require('../middlewares/auth');
 const validate = require('../middlewares/validate');
 const Joi = require('joi');
 
-// 开启盲盒
+// 开启武器箱
 router.post('/open',
     auth('user'),
     validate({

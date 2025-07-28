@@ -14,7 +14,7 @@ export const fetchBoxes = async (search = '') => {
 export const fetchBoxDetail = async (id) => {
     const response = await api.get(`/boxes/${id}`);
     if (!response.data) {
-        throw new Error('未获取到盲盒详情');
+        throw new Error('未获取到武器箱详情');
     }
 
     return response.data.data || response.data;
@@ -23,7 +23,7 @@ export const fetchBoxDetail = async (id) => {
 export const createBox = async (boxData) => {
     const response = await api.post('/boxes', boxData);
     if (!response.data) {
-        throw new Error('创建盲盒失败: 服务器返回空响应');
+        throw new Error('创建武器箱失败: 服务器返回空响应');
     }
 
     return response.data.data || response.data;
@@ -32,7 +32,7 @@ export const createBox = async (boxData) => {
 export const updateBox = async (id, boxData) => {
     const response = await api.put(`/boxes/${id}`, boxData);
     if (!response.data) {
-        throw new Error('更新盲盒失败: 服务器返回空响应');
+        throw new Error('更新武器箱失败: 服务器返回空响应');
     }
 
     return response.data.data || response.data;
@@ -43,7 +43,7 @@ export const deleteBox = async (id) => {
 };
 
 export const purchaseBox = async (boxId) => {
-    console.log('准备购买盲盒:', boxId);
+    console.log('准备购买武器箱:', boxId);
 
     try {
         const response = await api.post('/boxes/purchase', { boxId });

@@ -4,7 +4,7 @@ const Storage = require('../models/Storage');
 const Box = require('../models/Box');
 const User = require('../models/User');
 
-// 开启盲盒
+// 开启武器箱
 exports.openBox = async (req, res) => {
     const session = await mongoose.startSession();
     session.startTransaction();
@@ -29,7 +29,7 @@ exports.openBox = async (req, res) => {
             });
         }
 
-        // 验证未开启的盲盒是否存在
+        // 验证未开启的武器箱是否存在
         const unopenedBox = await Storage.findOne({
             _id: storageId,
             user: userId,
@@ -46,12 +46,12 @@ exports.openBox = async (req, res) => {
             await session.abortTransaction();
             return res.status(404).json({
                 status: 'error',
-                message: '未找到可开启的盲盒',
+                message: '未找到可开启的武器箱',
                 code: 'BOX_NOT_FOUND'
             });
         }
 
-        // 获取盲盒数据
+        // 获取武器箱数据
         const box = unopenedBox.boxData;
 
         // 随机抽取物品
@@ -93,7 +93,7 @@ exports.openBox = async (req, res) => {
             amount: 0
         });
 
-        // 更新仓库：移除未开启盲盒，添加获得的物品
+        // 更新仓库：移除未开启武器箱，添加获得的物品
         await Storage.deleteOne({ _id: storageId }).session(session);
 
         const newStorageItem = new Storage({
